@@ -15,6 +15,8 @@ $('.slider-home')
   .on('beforeChange', function () {
     document.getAnimations().forEach((anim) => {
       anim.cancel();
-      anim.play();
+      setTimeout(() => {
+        anim.play();
+      }, 500);
     });
   });
